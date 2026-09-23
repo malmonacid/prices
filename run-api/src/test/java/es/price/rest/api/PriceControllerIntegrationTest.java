@@ -50,7 +50,7 @@ public class PriceControllerIntegrationTest {
   void givenPricesUriWithQueryParameter_whenMockMVC_thenReturnTest1ResponseOK() throws Exception {
     // arrange
     MultiValueMap<String, String> paramMap = new LinkedMultiValueMap<>();
-    paramMap.add("applicationDate", "2020-06-14T10:00:00Z");
+    paramMap.add("applicationDate", "2026-06-14T10:00:00Z");
     paramMap.add("productId", "35455");
     paramMap.add("brandId", "1");
 
@@ -60,8 +60,8 @@ public class PriceControllerIntegrationTest {
         .andExpect(MockMvcResultMatchers.jsonPath("$.productId").value("35455"))
         .andExpect(MockMvcResultMatchers.jsonPath("$.brandId").value("1"))
         .andExpect(MockMvcResultMatchers.jsonPath("$.priceList").value("1"))
-        .andExpect(MockMvcResultMatchers.jsonPath("$.startDate").value("2020-06-14T00:00:00+02:00"))
-        .andExpect(MockMvcResultMatchers.jsonPath("$.endDate").value("2020-12-31T23:59:59+01:00"))
+        .andExpect(MockMvcResultMatchers.jsonPath("$.startDate").value("2026-06-14T00:00:00+02:00"))
+        .andExpect(MockMvcResultMatchers.jsonPath("$.endDate").value("2026-12-31T23:59:59+01:00"))
         .andExpect(MockMvcResultMatchers.jsonPath("$.price").value(35.5));
   }
 
@@ -70,7 +70,7 @@ public class PriceControllerIntegrationTest {
   void givenPricesUriWithQueryParameter_whenMockMVC_thenReturnTest2ResponseOK() throws Exception {
     // arrange
     MultiValueMap<String, String> paramMap = new LinkedMultiValueMap<>();
-    paramMap.add("applicationDate", "2020-06-14T16:00:00Z");
+    paramMap.add("applicationDate", "2026-06-14T16:00:00Z");
     paramMap.add("productId", "35455");
     paramMap.add("brandId", "1");
 
@@ -80,8 +80,8 @@ public class PriceControllerIntegrationTest {
         .andExpect(MockMvcResultMatchers.jsonPath("$.productId").value("35455"))
         .andExpect(MockMvcResultMatchers.jsonPath("$.brandId").value("1"))
         .andExpect(MockMvcResultMatchers.jsonPath("$.priceList").value("2"))
-        .andExpect(MockMvcResultMatchers.jsonPath("$.startDate").value("2020-06-14T15:00:00+02:00"))
-        .andExpect(MockMvcResultMatchers.jsonPath("$.endDate").value("2020-06-14T18:30:00+02:00"))
+        .andExpect(MockMvcResultMatchers.jsonPath("$.startDate").value("2026-06-14T15:00:00+02:00"))
+        .andExpect(MockMvcResultMatchers.jsonPath("$.endDate").value("2026-06-14T18:30:00+02:00"))
         .andExpect(MockMvcResultMatchers.jsonPath("$.price").value(25.45));
   }
 
@@ -90,7 +90,7 @@ public class PriceControllerIntegrationTest {
   void givenPricesUriWithQueryParameter_whenMockMVC_thenReturnTest3ResponseOK() throws Exception {
     // arrange
     MultiValueMap<String, String> paramMap = new LinkedMultiValueMap<>();
-    paramMap.add("applicationDate", "2020-06-14T21:00:00Z");
+    paramMap.add("applicationDate", "2026-06-14T21:00:00Z");
     paramMap.add("productId", "35455");
     paramMap.add("brandId", "1");
 
@@ -100,8 +100,8 @@ public class PriceControllerIntegrationTest {
         .andExpect(MockMvcResultMatchers.jsonPath("$.productId").value("35455"))
         .andExpect(MockMvcResultMatchers.jsonPath("$.brandId").value("1"))
         .andExpect(MockMvcResultMatchers.jsonPath("$.priceList").value("1"))
-        .andExpect(MockMvcResultMatchers.jsonPath("$.startDate").value("2020-06-14T00:00:00+02:00"))
-        .andExpect(MockMvcResultMatchers.jsonPath("$.endDate").value("2020-12-31T23:59:59+01:00"))
+        .andExpect(MockMvcResultMatchers.jsonPath("$.startDate").value("2026-06-14T00:00:00+02:00"))
+        .andExpect(MockMvcResultMatchers.jsonPath("$.endDate").value("2026-12-31T23:59:59+01:00"))
         .andExpect(MockMvcResultMatchers.jsonPath("$.price").value(35.5));
   }
 
@@ -110,7 +110,7 @@ public class PriceControllerIntegrationTest {
   void givenPricesUriWithQueryParameter_whenMockMVC_thenReturnTest4ResponseOK() throws Exception {
     // arrange
     MultiValueMap<String, String> paramMap = new LinkedMultiValueMap<>();
-    paramMap.add("applicationDate", "2020-06-15T00:00:00Z");
+    paramMap.add("applicationDate", "2026-06-15T00:00:00Z");
     paramMap.add("productId", "35455");
     paramMap.add("brandId", "1");
 
@@ -120,8 +120,8 @@ public class PriceControllerIntegrationTest {
         .andExpect(MockMvcResultMatchers.jsonPath("$.productId").value("35455"))
         .andExpect(MockMvcResultMatchers.jsonPath("$.brandId").value("1"))
         .andExpect(MockMvcResultMatchers.jsonPath("$.priceList").value("3"))
-        .andExpect(MockMvcResultMatchers.jsonPath("$.startDate").value("2020-06-15T00:00:00+02:00"))
-        .andExpect(MockMvcResultMatchers.jsonPath("$.endDate").value("2020-06-15T11:00:00+02:00"))
+        .andExpect(MockMvcResultMatchers.jsonPath("$.startDate").value("2026-06-15T00:00:00+02:00"))
+        .andExpect(MockMvcResultMatchers.jsonPath("$.endDate").value("2026-06-15T11:00:00+02:00"))
         .andExpect(MockMvcResultMatchers.jsonPath("$.price").value(30.5));
   }
 
@@ -130,7 +130,7 @@ public class PriceControllerIntegrationTest {
   void givenPricesUriWithQueryParameter_whenMockMVC_thenReturnTest5ResponseOK() throws Exception {
     // arrange
     MultiValueMap<String, String> paramMap = new LinkedMultiValueMap<>();
-    paramMap.add("applicationDate", "2020-06-16T21:00:00Z");
+    paramMap.add("applicationDate", "2026-06-16T21:00:00Z");
     paramMap.add("productId", "35455");
     paramMap.add("brandId", "1");
 
@@ -140,8 +140,8 @@ public class PriceControllerIntegrationTest {
         .andExpect(MockMvcResultMatchers.jsonPath("$.productId").value("35455"))
         .andExpect(MockMvcResultMatchers.jsonPath("$.brandId").value("1"))
         .andExpect(MockMvcResultMatchers.jsonPath("$.priceList").value("4"))
-        .andExpect(MockMvcResultMatchers.jsonPath("$.startDate").value("2020-06-15T16:00:00+02:00"))
-        .andExpect(MockMvcResultMatchers.jsonPath("$.endDate").value("2020-12-31T23:59:59+01:00"))
+        .andExpect(MockMvcResultMatchers.jsonPath("$.startDate").value("2026-06-15T16:00:00+02:00"))
+        .andExpect(MockMvcResultMatchers.jsonPath("$.endDate").value("2026-12-31T23:59:59+01:00"))
         .andExpect(MockMvcResultMatchers.jsonPath("$.price").value(38.95));
   }
 
@@ -150,7 +150,7 @@ public class PriceControllerIntegrationTest {
   void givenPricesUriWithInvalidParameter_whenMockMVC_thenReturnErrorResponse() throws Exception {
     // arrange
     MultiValueMap<String, String> paramMap = new LinkedMultiValueMap<>();
-    paramMap.add("applicationDate", "2020-06-14T21:00:00Z");
+    paramMap.add("applicationDate", "2026-06-14T21:00:00Z");
     paramMap.add("productId", "35455");
 
     // assert
@@ -162,7 +162,7 @@ public class PriceControllerIntegrationTest {
   void givenPricesUriWithNonExistentProduct_whenMockMVC_thenReturnNotFound() throws Exception {
     // arrange
     MultiValueMap<String, String> paramMap = new LinkedMultiValueMap<>();
-    paramMap.add("applicationDate", "2020-06-14T21:00:00Z");
+    paramMap.add("applicationDate", "2026-06-14T21:00:00Z");
     paramMap.add("productId", "99999");
     paramMap.add("brandId", "1");
 

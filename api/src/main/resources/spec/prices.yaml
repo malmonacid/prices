@@ -6,7 +6,7 @@ tags:
   - name: prices
     description: Prices operations
 paths:
-  /price:
+  /prices:
     get:
       tags:
         - prices
@@ -20,7 +20,7 @@ paths:
           schema:
             type: string
             format: date-time
-            example: '2024-03-18T17:00:00'
+            example: '2026-03-18T17:00:00'
           required: true
         - name: productId
           in: query
@@ -116,12 +116,12 @@ components:
           format: date-time
           type: string
           description: Start date
-          example: '2024-03-18T17:00:00'
+          example: '2026-03-18T17:00:00'
         endDate:
           format: date-time
           type: string
           description: End date
-          example: '2024-03-18T17:00:00'
+          example: '2026-03-18T17:00:00'
         price:
           type: number
           format: double

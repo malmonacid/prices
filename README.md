@@ -35,16 +35,9 @@ Table content
 * infrastructure
 * run-api
 
-## Console Run
+## Run
 
-1. Create file application-local.yml in /src/main/resources, and add the secrets that are missing.
-1. $ mvn clean spring-boot:run -Dspring-boot.run.profiles=local
-
-**WARNING: under no circumstances upload these changes to the repository.**
-
-## Intellij run
-
-1. Create file [application-local.yml content](#application-local-content), and add the secrets that are missing.
+1. Create file [application-local.yml content] at run-api/src/main/resources (#application-local-content), and add the secrets that are missing.
 
 1. Set profile active to local -Dspring.profiles.active=local
 1. Finally, select the created configuration and click run/debug.

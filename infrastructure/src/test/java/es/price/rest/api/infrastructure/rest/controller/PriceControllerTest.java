@@ -66,7 +66,7 @@ public class PriceControllerTest extends ApplicationTestUtils {
     // assert
     assertNotNull(response);
     Assertions.assertEquals(HttpStatus.OK, response.getStatusCode());
-    assertThat(output).contains("[PriceController - /price] Get price with params");
+    assertThat(output).contains("[PriceController - /prices] Get price with params");
   }
 
   @Test
@@ -87,7 +87,7 @@ public class PriceControllerTest extends ApplicationTestUtils {
     assertNotNull(response);
     Assertions.assertEquals(HttpStatus.OK, response.getStatusCode());
     assertThat(output).contains(
-        "[PriceController - /price] Get price with params: productId: 35455, brandId: 1, applicationDate: 2020-06-14T16:00Z");
+        "[PriceController - /prices] Get price with params: productId: 35455, brandId: 1, applicationDate: 2020-06-14T16:00Z");
   }
 
 }

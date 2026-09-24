@@ -2,7 +2,7 @@ package es.price.rest.api.infrastructure.rest.controller;
 
 import java.time.OffsetDateTime;
 
-import org.openapitools.api.PriceApi;
+import org.openapitools.api.PricesApi;
 import org.openapitools.model.PriceResponse;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -24,7 +24,7 @@ import lombok.extern.slf4j.Slf4j;
 @AllArgsConstructor
 @Slf4j
 @Validated
-public class PriceController implements PriceApi {
+public class PriceController implements PricesApi {
 
   private final PriceFindUseCasePort priceFindUseCasePort;
   private final PriceResponseDtoMapper priceResponseDtoMapper;
@@ -35,7 +35,7 @@ public class PriceController implements PriceApi {
   public ResponseEntity<PriceResponse> getPrice(@RequestParam OffsetDateTime applicationDate,
       @RequestParam String productId, @RequestParam String brandId) {
     log.info(
-        "[PriceController - /price] Get price with params: productId: {}, brandId: {}, applicationDate: {}",
+        "[PriceController - /prices] Get price with params: productId: {}, brandId: {}, applicationDate: {}",
         productId, brandId, applicationDate);
     return ResponseEntity.ok(priceResponseDtoMapper
         .toDto(priceFindUseCasePort.getPrice(priceQueryMapper.toQuery(PriceDto.builder()

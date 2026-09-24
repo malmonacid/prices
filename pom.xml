@@ -7,7 +7,7 @@
     <artifactId>prices</artifactId>
     <version>1.0.0-SNAPSHOT</version>
     <packaging>pom</packaging>
-    <name>price</name>
+    <name>prices</name>
     <description>Price API endpoint rest to consult products rates by dates</description>
 
     <parent>
